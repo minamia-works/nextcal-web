@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー | NextCal</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; max-width: 680px; margin: 0 auto; padding: 48px 24px 96px; line-height: 1.9; color: #37231A; background: #FFFAF5; }
+  @media (prefers-color-scheme: dark) { body { color: #FFF4EC; background: #16110E; } a { color: #FF8A63; } hr { border-color: #3a2f28; } }
+  h1 { font-size: 1.5rem; } h2 { font-size: 1.15rem; margin-top: 2em; } h3 { font-size: 1rem; margin-top: 1.4em; }
+  p.updated { opacity: 0.6; font-size: 0.9rem; }
+  a { color: #F4511E; } a.back { display: inline-block; margin-bottom: 24px; }
+  hr { border: none; border-top: 1px solid #eadfd3; margin: 2em 0; }
+  ul { padding-left: 1.2em; } li { margin: 0.3em 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; } td, th { border: 1px solid #d9c9b8; padding: 8px 10px; text-align: left; vertical-align: top; }
+</style>
+</head>
+<body>
+  <a class="back" href="../">← NextCal</a>
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">最終更新日：2026年10月23日</p>
+
+  <p>minamia-works（以下「当方」）は、iOSアプリケーション「NextCal」（以下「本アプリ」）における情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。</p>
+
+  <hr>
+  <h2>1. 要点</h2>
+  <ul>
+    <li>カレンダーの予定の<strong>内容（名前・場所・参加者・メモ）は、端末の外に送信しません</strong>。予定の読み取りと表示の判断は、すべて端末の中で行います。</li>
+    <li>ロック画面や Dynamic Island に表示を出すため、当方のサーバーが、通知を送る時刻と、端末の宛先だけを預かります。</li>
+    <li>広告（Google AdMob）を表示します。</li>
+  </ul>
+
+  <hr>
+  <h2>2. サーバーに送信・保存する情報</h2>
+  <p>本アプリは、アプリが閉じている間も、時刻どおりに Live Activity を出し、消すために、当方のサーバーに次の情報を送り、保存します。</p>
+  <table>
+    <tr><th>情報</th><th>内容・目的</th></tr>
+    <tr><td>端末の識別子と秘密値</td><td>端末ごとに、アプリが作るランダムな値です（氏名や Apple ID とは結びつきません）。秘密値は、ハッシュ化して保存します。サーバーが、端末を見分け、他の人から操作されないようにするために使います。</td></tr>
+    <tr><td>通知の宛先（トークン）</td><td>Apple の通知サービス（APNs）が、この端末に通知を届けるための値です。表示の開始用・更新用など、複数あります。</td></tr>
+    <tr><td>通知を送る時刻</td><td>Live Activity を始める・終わらせる・端末を起こす時刻（UNIX 秒）と、表示を見分けるための鍵（予定の開始時刻）です。<strong>予定の名前などの内容は含みません。</strong></td></tr>
+    <tr><td>表示のオン・オフ</td><td>Live Activity を一時停止しているかどうかです。</td></tr>
+    <tr><td>連絡の記録</td><td>端末から最後に連絡があった時刻、応答のなかった通知の数、サーバーが送った通知の種類と時刻です。通知の内容は含みません。動作の確認と、案内の通知（開始できなかったとき）のために使います。</td></tr>
+  </table>
+  <h3>収集しない情報</h3>
+  <ul>
+    <li>予定の名前・場所・参加者・メモなど、カレンダーの内容</li>
+    <li>氏名、メールアドレス、電話番号など、個人を特定できる情報</li>
+    <li>位置情報、連絡先</li>
+    <li>アカウント情報（本アプリはアカウント登録・ログインを必要としません）</li>
+  </ul>
+
+  <hr>
+  <h2>3. 情報の利用目的</h2>
+  <ul>
+    <li>予定の開始前に、ロック画面・Dynamic Island に Live Activity を表示し、開始後に消すため</li>
+    <li>表示が出なかったときに、案内の通知を送るため</li>
+    <li>サービスの安定した運営と、不具合の調査のため</li>
+  </ul>
+
+  <hr>
+  <h2>4. 保存期間と削除</h2>
+  <ul>
+    <li>端末から 90 日間連絡がない場合、サーバーはその端末の情報を自動で削除します。</li>
+    <li>サーバーの情報の削除を希望する場合は、下の連絡先にご連絡ください。端末の識別子（アプリの端末内に保存されるランダムな値）が必要になるため、ご本人の確認ができる範囲で対応します。確認が難しい場合も、アプリを削除したうえで 90 日経てば、自動で削除されます。</li>
+    <li>アプリをアンインストールした場合も、サーバーの情報は、上の 90 日が過ぎると自動で削除されます。</li>
+  </ul>
+
+  <hr>
+  <h2>5. 広告</h2>
+  <p>本アプリは、Google LLC の広告サービス「AdMob」を利用して、アプリを開いたときに全画面の広告を表示します。バックグラウンドで更新が行われるとき、および Live Activity の更新では、広告を表示しません。</p>
+  <ul>
+    <li>広告の配信・計測のため、Google が、端末の情報（広告に使う識別子、IP アドレス、広告の操作の記録、端末・アプリの情報など）を収集・利用することがあります。詳しくは、<a href="https://policies.google.com/technologies/partner-sites?hl=ja">Google のポリシー</a>をご覧ください。</li>
+    <li>EU・英国・米国の一部の州など、法令で必要な地域では、広告に関する同意の確認（Google の UMP）を表示します。同意は、アプリの「設定 → このアプリについて → 広告のプライバシー設定」（表示される地域のみ）から、いつでも変更できます。</li>
+    <li>本アプリは、Apple の App Tracking Transparency（アプリの追跡の許可）は求めません。</li>
+  </ul>
+
+  <hr>
+  <h2>6. 端末の権限</h2>
+  <ul>
+    <li><strong>カレンダー（フルアクセス）</strong>：予定を読み取り、表示を決めるために使います。読み取った内容は、端末の外に送信しません。</li>
+    <li><strong>通知</strong>：アプリを閉じている間に追加・変更された予定を検知するために、静かな通知（画面を点けず、音も出さず、通知センターに残らない通知）を約 5 分おきに受け取ります。この通知で動く拡張機能が、端末の中でカレンダーを読み、予定の開始時刻だけをサーバーに送ります（予定の名前などの内容は送りません）。また、表示を開始できなかったときの案内にも使います。通知を許可しなくても、アプリを開いている間は動作します。</li>
+    <li><strong>Live Activity</strong>：ロック画面・Dynamic Island に表示するために使います。</li>
+  </ul>
+
+  <hr>
+  <h2>7. 第三者サービス</h2>
+  <ul>
+    <li>Apple（APNs）：通知の配信</li>
+    <li>Fly.io：サーバーのホスティング（東京リージョン）</li>
+    <li>Google AdMob：広告の配信</li>
+  </ul>
+  <p>当方は、上記以外に、情報を第三者へ提供しません。ただし、法令に基づく開示の請求があった場合を除きます。</p>
+
+  <hr>
+  <h2>8. お子様のプライバシー</h2>
+  <p>本アプリは、13歳未満のお子様を対象としたものではなく、お子様から意図的に情報を収集することはありません。</p>
+
+  <hr>
+  <h2>9. 本ポリシーの変更</h2>
+  <p>本ポリシーの内容は、法令の変更や本アプリの機能追加などに応じて、変更されることがあります。変更後のポリシーは、本ページに掲載した時点から効力を生じます。</p>
+
+  <hr>
+  <h2>10. お問い合わせ</h2>
+  <ul>
+    <li>開発者：minamia-works</li>
+    <li>お問い合わせ先：<a href="mailto:minamia.works@gmail.com">minamia.works@gmail.com</a></li>
+  </ul>
+</body>
+</html>

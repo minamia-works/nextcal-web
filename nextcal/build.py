@@ -31,11 +31,13 @@ def write(path, content):
 
 UPDATED_JA = "2026年10月23日"
 UPDATED_EN = "October 23, 2026"
+UPDATED_PRIVACY_JA = "2026年10月31日"
+UPDATED_PRIVACY_EN = "October 31, 2026"
 MAIL = "minamia.works@gmail.com"
 
 # ---------- 日本語 ----------
 ja_privacy = f"""  <h1>プライバシーポリシー</h1>
-  <p class="updated">最終更新日：{UPDATED_JA}</p>
+  <p class="updated">最終更新日：{UPDATED_PRIVACY_JA}</p>
 
   <p>minamia-works（以下「当方」）は、iOSアプリケーション「NextCal」（以下「本アプリ」）における情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。</p>
 
@@ -45,6 +47,7 @@ ja_privacy = f"""  <h1>プライバシーポリシー</h1>
     <li>カレンダーの予定の<strong>内容（名前・場所・参加者・メモ）は、端末の外に送信しません</strong>。予定の読み取りと表示の判断は、すべて端末の中で行います。</li>
     <li>ロック画面や Dynamic Island に表示を出すため、当方のサーバーが、通知を送る時刻と、端末の宛先だけを預かります。</li>
     <li>広告（Google AdMob）を表示します。</li>
+    <li>Google カレンダーとの連携は、任意です。つなぐ場合も、予定の内容は、端末の外に送信しません。</li>
   </ul>
 
   <hr>
@@ -57,6 +60,7 @@ ja_privacy = f"""  <h1>プライバシーポリシー</h1>
     <tr><td>通知を送る時刻</td><td>Live Activity を始める・終わらせる・端末を起こす時刻（UNIX 秒）と、表示を見分けるための鍵（予定の開始時刻）です。<strong>予定の名前などの内容は含みません。</strong></td></tr>
     <tr><td>表示のオン・オフ</td><td>Live Activity を一時停止しているかどうかです。</td></tr>
     <tr><td>連絡の記録</td><td>端末から最後に連絡があった時刻、応答のなかった通知の数、サーバーが送った通知の種類と時刻です。通知の内容は含みません。動作の確認と、案内の通知（開始できなかったとき）のために使います。</td></tr>
+    <tr><td>Google カレンダーの変更通知の登録（任意の連携を使うときだけ）</td><td>通知を見分けるための、ランダムな番号と確認用の値と期限です。<strong>メールアドレス・Google のトークン・予定の内容は含みません。</strong>連携を解除するか、アプリを削除して 90 日たつと、削除します。</td></tr>
   </table>
   <h3>収集しない情報</h3>
   <ul>
@@ -100,24 +104,38 @@ ja_privacy = f"""  <h1>プライバシーポリシー</h1>
   </ul>
 
   <hr>
-  <h2>7. 第三者サービス</h2>
+  <h2>7. Google カレンダーとの連携（任意）</h2>
+  <p>本アプリは、お客様が選んだ場合に限り、お客様の Google アカウントの Google カレンダーを、読み取れます（バージョン 1.1 以降）。つながなくても、本アプリは使えます。</p>
+  <ul>
+    <li><strong>読み取る情報</strong>：予定の名前、開始・終了の時刻、終日かどうか、お客様の出欠の返答、カレンダーの名前と色。<strong>読み取りのみ</strong>で、予定の作成・変更・削除はしません。</li>
+    <li><strong>使い方</strong>：これらの情報は、お客様の iPhone の中だけで、ロック画面などに次の予定を表示するために使います。<strong>予定の内容と、Google のアクセス用の鍵（トークン）は、当方のサーバーを含め、iPhone の外へ送信しません。</strong></li>
+    <li><strong>保存</strong>：Google のアクセス用の鍵は、お客様の iPhone の Keychain に、この端末の中だけに保存します。通信できないときのために、予定の一時的な写しを、iPhone の中に最大 3 日間保存します（バックアップには含まれません）。</li>
+    <li><strong>変更の通知</strong>：Google カレンダーの予定が変わったことを素早く知るため、Google から、当方のサーバーへ、「変更があった」という通知（予定の内容やメールアドレスを含まない通知）を受け取ることがあります。サーバーが保存するのは、通知を見分けるための、ランダムな番号と確認用の値と期限だけです。</li>
+    <li><strong>共有・広告</strong>：Google から取得した情報を、第三者へ提供せず、広告・分析・販売には使いません。人が読むこともありません。</li>
+    <li><strong>やめるとき</strong>：アプリの設定の「Google カレンダー」から、アカウントを解除してください。Google への権限の取り消しと、iPhone の中の鍵・写しの削除を、同時に行います。<a href="https://myaccount.google.com/permissions">Google アカウントの設定</a>からも取り消せます。</li>
+  </ul>
+  <p>NextCal's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.（本アプリによる、Google API から受け取った情報の使用と、他のアプリへの転送は、限定的な使用の要件を含む、Google API サービスのユーザーデータに関するポリシーに従います。）</p>
+
+  <hr>
+  <h2>8. 第三者サービス</h2>
   <ul>
     <li>Apple（APNs）：通知の配信</li>
     <li>Fly.io：サーバーのホスティング（東京リージョン）</li>
     <li>Google AdMob：広告の配信</li>
+    <li>Google（Google カレンダー API）：任意の連携で、お客様の iPhone が、直接つなぐ（当方のサーバーは通りません）</li>
   </ul>
   <p>当方は、上記以外に、情報を第三者へ提供しません。ただし、法令に基づく開示の請求があった場合を除きます。</p>
 
   <hr>
-  <h2>8. お子様のプライバシー</h2>
+  <h2>9. お子様のプライバシー</h2>
   <p>本アプリは、13歳未満のお子様を対象としたものではなく、お子様から意図的に情報を収集することはありません。</p>
 
   <hr>
-  <h2>9. 本ポリシーの変更</h2>
+  <h2>10. 本ポリシーの変更</h2>
   <p>本ポリシーの内容は、法令の変更や本アプリの機能追加などに応じて、変更されることがあります。変更後のポリシーは、本ページに掲載した時点から効力を生じます。</p>
 
   <hr>
-  <h2>10. お問い合わせ</h2>
+  <h2>11. お問い合わせ</h2>
   <ul>
     <li>開発者：minamia-works</li>
     <li>お問い合わせ先：<a href="mailto:{MAIL}">{MAIL}</a></li>
@@ -213,7 +231,7 @@ ja_support = f"""  <h1>サポート</h1>
 
 # ---------- English ----------
 en_privacy = f"""  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: {UPDATED_EN}</p>
+  <p class="updated">Last updated: {UPDATED_PRIVACY_EN}</p>
 
   <p>minamia-works ("we") provides the iOS app "NextCal" (the "App"). This policy explains how information is handled in the App.</p>
 
@@ -223,6 +241,7 @@ en_privacy = f"""  <h1>Privacy Policy</h1>
     <li>The <strong>contents of your calendar events (titles, locations, attendees, notes) never leave your device</strong>. Reading events and deciding what to show happens entirely on your device.</li>
     <li>To show Live Activities on the Lock Screen and in the Dynamic Island, our server holds only the times to send updates and your device's push addresses.</li>
     <li>The App shows ads (Google AdMob).</li>
+    <li>Connecting Google Calendar is optional. Even then, event contents never leave your device.</li>
   </ul>
 
   <hr>
@@ -235,6 +254,7 @@ en_privacy = f"""  <h1>Privacy Policy</h1>
     <tr><td>Times to send notifications</td><td>Times (Unix seconds) to start or end a Live Activity or wake the app, and a key to tell Live Activities apart (the event start time). <strong>They do not include event titles or any other event content.</strong></td></tr>
     <tr><td>On/off state</td><td>Whether you have paused Live Activities.</td></tr>
     <tr><td>Contact log</td><td>The last time the device contacted the server, the number of unanswered notifications, and the type and time of notifications the server sent (not their content). Used to confirm operation and to send help notifications (when a Live Activity could not start).</td></tr>
+    <tr><td>Google Calendar change-notification registration (only if you use the optional connection)</td><td>A random identifier, a verification value, and an expiry time used to recognize those notices. <strong>No email address, Google token, or event contents.</strong> Deleted when you disconnect, or 90 days after you delete the app.</td></tr>
   </table>
   <h3>Information we do not collect</h3>
   <ul>
@@ -278,24 +298,38 @@ en_privacy = f"""  <h1>Privacy Policy</h1>
   </ul>
 
   <hr>
-  <h2>7. Third-party services</h2>
+  <h2>7. Google Calendar connection (optional)</h2>
+  <p>Only if you choose to, NextCal can read the Google Calendar of your Google Account (version 1.1 and later). The App works without it.</p>
+  <ul>
+    <li><strong>What it reads:</strong> event titles, start and end times, whether an event is all-day, your response status, and calendar names and colors. <strong>Read-only</strong>: it never creates, edits, or deletes anything.</li>
+    <li><strong>How it is used:</strong> only on your iPhone, to show your next events on the Lock Screen and in the App. <strong>Event contents and your Google access tokens are never sent off your iPhone, including to our server.</strong></li>
+    <li><strong>Storage:</strong> the Google access token is kept in your iPhone's Keychain, on this device only. For when you are offline, a temporary copy of your events stays on your iPhone for up to 3 days and is not included in backups.</li>
+    <li><strong>Change notifications:</strong> to learn quickly that your Google Calendar changed, our server may receive a notice from Google that "something changed" (it contains no event contents and no email address). Our server stores only a random identifier, a verification value, and an expiry time to recognize that notice.</li>
+    <li><strong>Sharing and ads:</strong> we do not share Google user data with anyone and do not use it for advertising, analytics, or sale. No human reads it.</li>
+    <li><strong>Disconnecting:</strong> use Settings → Google Calendar in the App. This revokes access at Google and deletes the token and the local copy from your iPhone. You can also revoke access in your <a href="https://myaccount.google.com/permissions">Google Account settings</a>.</li>
+  </ul>
+  <p>NextCal's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <hr>
+  <h2>8. Third-party services</h2>
   <ul>
     <li>Apple (APNs): notification delivery</li>
     <li>Fly.io: server hosting (Tokyo region)</li>
     <li>Google AdMob: ad delivery</li>
+    <li>Google (Google Calendar API): for the optional connection, your iPhone connects to Google directly (it does not go through our server)</li>
   </ul>
   <p>We do not share information with other third parties, except when disclosure is required by law.</p>
 
   <hr>
-  <h2>8. Children</h2>
+  <h2>9. Children</h2>
   <p>The App is not directed to children under 13, and we do not knowingly collect information from them.</p>
 
   <hr>
-  <h2>9. Changes</h2>
+  <h2>10. Changes</h2>
   <p>We may update this policy, for example when laws change or features are added. Changes take effect when posted on this page.</p>
 
   <hr>
-  <h2>10. Contact</h2>
+  <h2>11. Contact</h2>
   <ul>
     <li>Developer: minamia-works</li>
     <li>Contact: <a href="mailto:{MAIL}">{MAIL}</a></li>
@@ -398,6 +432,7 @@ HOME_JA = """  <h1>NextCal</h1>
     <li>開始時刻ごとに、別の Live Activity で、予定の名前とカウントダウンを表示します。同じ時刻に始まる複数の予定は、まとめて 1 枚に表示します。</li>
     <li>通知を許可していれば、アプリを閉じていても、強制終了していても、新しく追加した予定を拾います（通知は目立たない形で送られます）。</li>
     <li>iPhone のカレンダーアプリに入っているカレンダー（iCloud、Google など）を使います。使うカレンダーと、終日の予定を含めるかを、選べます。</li>
+    <li>（バージョン 1.1 以降・任意）Google カレンダーに、直接つなぐこともできます。読み取りのみで、予定の変更が、すばやく反映されます。つなぐ場合も、予定の内容は、iPhone の外へ送信しません。</li>
   </ul>
 
   <h2>プライバシー</h2>
@@ -418,6 +453,7 @@ HOME_EN = """  <h1>NextCal</h1>
     <li>Each start time gets its own Live Activity with the event name and a countdown. Events that start at the same time are shown together on one card.</li>
     <li>With notifications allowed, it picks up newly added events even when the app is closed or force-quit (the notifications are silent and unobtrusive).</li>
     <li>It works with the calendars already in your iPhone's Calendar app (iCloud, Google, and more). You choose which calendars to use and whether to include all-day events.</li>
+    <li>(Version 1.1 and later, optional) You can also connect Google Calendar directly. It is read-only and picks up changes quickly. Event contents still never leave your iPhone.</li>
   </ul>
 
   <h2>Privacy</h2>
